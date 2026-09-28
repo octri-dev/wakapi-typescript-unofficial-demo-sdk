@@ -1,0 +1,1192 @@
+{
+  "baseUrl": "https://behavior.test",
+  "operationCount": 22,
+  "credentials": {
+    "bearer": "behavior-bearer-token",
+    "apiKey": "behavior-api-key",
+    "basicUser": "behavior-user",
+    "basicPassword": "behavior-password",
+    "basicHeader": "Basic YmVoYXZpb3ItdXNlcjpiZWhhdmlvci1wYXNzd29yZA=="
+  },
+  "authHeaders": {},
+  "cases": [
+    {
+      "id": "behavior-1",
+      "operationId": "getBadge",
+      "kinds": ["json-response", "path-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/shields/v1/{user}/{interval}/{filter}",
+        "pathParameters": {
+          "user": "user",
+          "interval": "today",
+          "filter": "filter"
+        },
+        "query": [],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": []
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/shields/v1/user/today/filter",
+        "query": "",
+        "url": "https://behavior.test/compat/shields/v1/user/today/filter",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"color\":\"color\",\"label\":\"label\",\"message\":\"example text\",\"schemaVersion\":1}",
+        "value": {
+          "color": "color",
+          "label": "label",
+          "message": "example text",
+          "schemaVersion": 1
+        }
+      }
+    },
+    {
+      "id": "behavior-2",
+      "operationId": "getWakatimeLeaders",
+      "kinds": ["auth-application", "json-response"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/leaders",
+        "pathParameters": {},
+        "query": [],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/leaders",
+        "query": "",
+        "url": "https://behavior.test/compat/wakatime/v1/leaders",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"current_user\":{\"page\":30,\"rank\":1,\"user\":{\"created_at\":\"2024-01-01T00:00:00Z\",\"display_name\":\"Example Name\",\"email\":\"user@example.com\",\"full_name\":\"Example Name\",\"id\":\"id-1\",\"is_email_confirmed\":false,\"is_email_public\":false,\"last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"last_plugin_name\":\"Example Name\",\"last_project\":\"last_project\",\"modified_at\":\"2024-01-01T00:00:00Z\",\"photo\":\"photo\",\"timezone\":\"2024-01-01T00:00:00Z\",\"username\":\"Example Name\",\"website\":\"https://example.com\"}},\"data\":[{\"rank\":1,\"running_total\":{\"daily_average\":30,\"human_readable_daily_average\":\"human_readable_daily_average\",\"human_readable_total\":\"human_readable_total\",\"languages\":[{\"name\":\"Example Name\",\"total_seconds\":9.99}],\"total_seconds\":9.99},\"user\":{\"created_at\":\"2024-01-01T00:00:00Z\",\"display_name\":\"Example Name\",\"email\":\"user@example.com\",\"full_name\":\"Example Name\",\"id\":\"id-1\",\"is_email_confirmed\":false,\"is_email_public\":false,\"last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"last_plugin_name\":\"Example Name\",\"last_project\":\"last_project\",\"modified_at\":\"2024-01-01T00:00:00Z\",\"photo\":\"photo\",\"timezone\":\"2024-01-01T00:00:00Z\",\"username\":\"Example Name\",\"website\":\"https://example.com\"}}],\"language\":\"language\",\"page\":30,\"range\":{\"end_date\":\"2024-01-01T00:00:00Z\",\"end_text\":\"end_text\",\"name\":\"Example Name\",\"start_date\":\"2024-01-01T00:00:00Z\",\"start_text\":\"start_text\",\"text\":\"text\"},\"total_pages\":30}",
+        "value": {
+          "current_user": {
+            "page": 30,
+            "rank": 1,
+            "user": {
+              "created_at": "2024-01-01T00:00:00Z",
+              "display_name": "Example Name",
+              "email": "user@example.com",
+              "full_name": "Example Name",
+              "id": "id-1",
+              "is_email_confirmed": false,
+              "is_email_public": false,
+              "last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "last_plugin_name": "Example Name",
+              "last_project": "last_project",
+              "modified_at": "2024-01-01T00:00:00Z",
+              "photo": "photo",
+              "timezone": "2024-01-01T00:00:00Z",
+              "username": "Example Name",
+              "website": "https://example.com"
+            }
+          },
+          "data": [
+            {
+              "rank": 1,
+              "running_total": {
+                "daily_average": 30,
+                "human_readable_daily_average": "human_readable_daily_average",
+                "human_readable_total": "human_readable_total",
+                "languages": [
+                  {
+                    "name": "Example Name",
+                    "total_seconds": 9.99
+                  }
+                ],
+                "total_seconds": 9.99
+              },
+              "user": {
+                "created_at": "2024-01-01T00:00:00Z",
+                "display_name": "Example Name",
+                "email": "user@example.com",
+                "full_name": "Example Name",
+                "id": "id-1",
+                "is_email_confirmed": false,
+                "is_email_public": false,
+                "last_heartbeat_at": "2024-01-01T00:00:00Z",
+                "last_plugin_name": "Example Name",
+                "last_project": "last_project",
+                "modified_at": "2024-01-01T00:00:00Z",
+                "photo": "photo",
+                "timezone": "2024-01-01T00:00:00Z",
+                "username": "Example Name",
+                "website": "https://example.com"
+              }
+            }
+          ],
+          "language": "language",
+          "page": 30,
+          "range": {
+            "end_date": "2024-01-01T00:00:00Z",
+            "end_text": "end_text",
+            "name": "Example Name",
+            "start_date": "2024-01-01T00:00:00Z",
+            "start_text": "start_text",
+            "text": "text"
+          },
+          "total_pages": 30
+        }
+      }
+    },
+    {
+      "id": "behavior-3",
+      "operationId": "getWakatimeUser",
+      "kinds": ["auth-application", "json-response", "path-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}",
+        "pathParameters": {
+          "user": "user"
+        },
+        "query": [],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user",
+        "query": "",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"data\":{\"created_at\":\"2024-01-01T00:00:00Z\",\"display_name\":\"Example Name\",\"email\":\"user@example.com\",\"full_name\":\"Example Name\",\"id\":\"id-1\",\"is_email_confirmed\":false,\"is_email_public\":false,\"last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"last_plugin_name\":\"Example Name\",\"last_project\":\"last_project\",\"modified_at\":\"2024-01-01T00:00:00Z\",\"photo\":\"photo\",\"timezone\":\"2024-01-01T00:00:00Z\",\"username\":\"Example Name\",\"website\":\"https://example.com\"}}",
+        "value": {
+          "data": {
+            "created_at": "2024-01-01T00:00:00Z",
+            "display_name": "Example Name",
+            "email": "user@example.com",
+            "full_name": "Example Name",
+            "id": "id-1",
+            "is_email_confirmed": false,
+            "is_email_public": false,
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "last_plugin_name": "Example Name",
+            "last_project": "last_project",
+            "modified_at": "2024-01-01T00:00:00Z",
+            "photo": "photo",
+            "timezone": "2024-01-01T00:00:00Z",
+            "username": "Example Name",
+            "website": "https://example.com"
+          }
+        }
+      }
+    },
+    {
+      "id": "behavior-4",
+      "operationId": "getHeartbeats",
+      "kinds": [
+        "auth-application",
+        "error-response",
+        "json-response",
+        "path-serialization",
+        "query-serialization"
+      ],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/heartbeats",
+        "pathParameters": {
+          "user": "user"
+        },
+        "query": [
+          {
+            "name": "date",
+            "style": "form",
+            "explode": true,
+            "value": "2024-01-01T00:00:00Z",
+            "serialized": "2024-01-01T00:00:00Z"
+          }
+        ],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user/heartbeats",
+        "query": "date=2024-01-01T00%3A00%3A00Z",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/heartbeats?date=2024-01-01T00%3A00%3A00Z",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"data\":[{\"ai_input_tokens\":1,\"ai_line_changes\":1,\"ai_output_tokens\":1,\"ai_prompt_length\":1,\"ai_session\":\"ai_session\",\"branch\":\"branch\",\"category\":\"category\",\"created_at\":\"2024-01-01T00:00:00Z\",\"cursorpos\":1,\"entity\":\"entity\",\"human_line_changes\":1,\"id\":\"id-1\",\"is_write\":false,\"language\":\"language\",\"line_additions\":1,\"line_deletions\":1,\"lineno\":1,\"lines\":1,\"machine_name_id\":\"machine_name_-1\",\"project\":\"project\",\"time\":1,\"type\":\"type\",\"user_agent_id\":\"user_agent_-1\",\"user_id\":\"user_-1\"}],\"end\":\"end\",\"start\":\"start\",\"timezone\":\"2024-01-01T00:00:00Z\"}",
+        "value": {
+          "data": [
+            {
+              "ai_input_tokens": 1,
+              "ai_line_changes": 1,
+              "ai_output_tokens": 1,
+              "ai_prompt_length": 1,
+              "ai_session": "ai_session",
+              "branch": "branch",
+              "category": "category",
+              "created_at": "2024-01-01T00:00:00Z",
+              "cursorpos": 1,
+              "entity": "entity",
+              "human_line_changes": 1,
+              "id": "id-1",
+              "is_write": false,
+              "language": "language",
+              "line_additions": 1,
+              "line_deletions": 1,
+              "lineno": 1,
+              "lines": 1,
+              "machine_name_id": "machine_name_-1",
+              "project": "project",
+              "time": 1,
+              "type": "type",
+              "user_agent_id": "user_agent_-1",
+              "user_id": "user_-1"
+            }
+          ],
+          "end": "end",
+          "start": "start",
+          "timezone": "2024-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "id": "behavior-5",
+      "operationId": "postHeartbeat3",
+      "kinds": ["auth-application", "empty-response", "json-request", "path-serialization"],
+      "request": {
+        "method": "POST",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/heartbeats",
+        "pathParameters": {
+          "user": "user"
+        },
+        "query": [],
+        "headers": {},
+        "body": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        },
+        "bodyKind": "json",
+        "contentType": "application/json",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "POST",
+        "path": "/compat/wakatime/v1/users/user/heartbeats",
+        "query": "",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/heartbeats",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "bodyText": "{\"ai_input_tokens\":1,\"ai_line_changes\":1,\"ai_output_tokens\":1,\"ai_prompt_length\":1,\"ai_session\":\"ai_session\",\"branch\":\"branch\",\"category\":\"category\",\"created_at\":1,\"cursorpos\":1,\"editor\":\"editor\",\"entity\":\"entity\",\"human_line_changes\":1,\"is_write\":false,\"language\":\"language\",\"line_additions\":1,\"line_deletions\":1,\"lineno\":1,\"lines\":1,\"machine\":\"machine\",\"operating_system\":\"operating_system\",\"project\":\"project\",\"project_root_count\":1,\"time\":1,\"type\":\"type\",\"user_agent\":\"user_agent\"}",
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "empty",
+        "status": 204,
+        "mediaType": null,
+        "body": "",
+        "value": null
+      }
+    },
+    {
+      "id": "behavior-6",
+      "operationId": "getWakatimeProjects",
+      "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/projects",
+        "pathParameters": {
+          "user": "user"
+        },
+        "query": [
+          {
+            "name": "q",
+            "style": "form",
+            "explode": true,
+            "value": "q",
+            "serialized": "q"
+          }
+        ],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user/projects",
+        "query": "q=q",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/projects?q=q",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"data\":[{\"created_at\":\"2024-01-01T00:00:00Z\",\"human_readable_last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"id\":\"id-1\",\"last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"name\":\"Example Name\",\"urlencoded_name\":\"https://example.com\"}]}",
+        "value": {
+          "data": [
+            {
+              "created_at": "2024-01-01T00:00:00Z",
+              "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "name": "Example Name",
+              "urlencoded_name": "https://example.com"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "behavior-7",
+      "operationId": "getWakatimeProject",
+      "kinds": ["auth-application", "json-response", "path-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/projects/{id}",
+        "pathParameters": {
+          "user": "user",
+          "id": "id-1"
+        },
+        "query": [],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user/projects/id-1",
+        "query": "",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/projects/id-1",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"data\":{\"created_at\":\"2024-01-01T00:00:00Z\",\"human_readable_last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"id\":\"id-1\",\"last_heartbeat_at\":\"2024-01-01T00:00:00Z\",\"name\":\"Example Name\",\"urlencoded_name\":\"https://example.com\"}}",
+        "value": {
+          "data": {
+            "created_at": "2024-01-01T00:00:00Z",
+            "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "name": "Example Name",
+            "urlencoded_name": "https://example.com"
+          }
+        }
+      }
+    },
+    {
+      "id": "behavior-8",
+      "operationId": "getWakatimesTats",
+      "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/stats/{range}",
+        "pathParameters": {
+          "user": "user",
+          "range": "today"
+        },
+        "query": [
+          {
+            "name": "project",
+            "style": "form",
+            "explode": true,
+            "value": "project",
+            "serialized": "project"
+          },
+          {
+            "name": "language",
+            "style": "form",
+            "explode": true,
+            "value": "language",
+            "serialized": "language"
+          },
+          {
+            "name": "editor",
+            "style": "form",
+            "explode": true,
+            "value": "editor",
+            "serialized": "editor"
+          },
+          {
+            "name": "operating_system",
+            "style": "form",
+            "explode": true,
+            "value": "operating_system",
+            "serialized": "operating_system"
+          },
+          {
+            "name": "machine",
+            "style": "form",
+            "explode": true,
+            "value": "machine",
+            "serialized": "machine"
+          },
+          {
+            "name": "label",
+            "style": "form",
+            "explode": true,
+            "value": "label",
+            "serialized": "label"
+          }
+        ],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user/stats/today",
+        "query": "project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/stats/today?project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"data\":{\"branches\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"categories\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"daily_average\":30,\"days_including_holidays\":1,\"editors\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"end\":\"end\",\"human_readable_daily_average\":\"human_readable_daily_average\",\"human_readable_range\":\"human_readable_range\",\"human_readable_total\":\"human_readable_total\",\"is_coding_activity_visible\":false,\"is_other_usage_visible\":false,\"languages\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"machines\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"operating_systems\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"projects\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"range\":\"range\",\"start\":\"start\",\"status\":\"active\",\"timezone\":\"2024-01-01T00:00:00Z\",\"total_seconds\":9.99,\"user_id\":\"user_-1\",\"username\":\"Example Name\"}}",
+        "value": {
+          "data": {
+            "branches": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "categories": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "daily_average": 30,
+            "days_including_holidays": 1,
+            "editors": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "end": "end",
+            "human_readable_daily_average": "human_readable_daily_average",
+            "human_readable_range": "human_readable_range",
+            "human_readable_total": "human_readable_total",
+            "is_coding_activity_visible": false,
+            "is_other_usage_visible": false,
+            "languages": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "machines": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "operating_systems": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "projects": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "range": "range",
+            "start": "start",
+            "status": "active",
+            "timezone": "2024-01-01T00:00:00Z",
+            "total_seconds": 9.99,
+            "user_id": "user_-1",
+            "username": "Example Name"
+          }
+        }
+      }
+    },
+    {
+      "id": "behavior-9",
+      "operationId": "getWakatimeSummaries",
+      "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/compat/wakatime/v1/users/{user}/summaries",
+        "pathParameters": {
+          "user": "user"
+        },
+        "query": [
+          {
+            "name": "range",
+            "style": "form",
+            "explode": true,
+            "value": "today",
+            "serialized": "today"
+          },
+          {
+            "name": "start",
+            "style": "form",
+            "explode": true,
+            "value": "start",
+            "serialized": "start"
+          },
+          {
+            "name": "end",
+            "style": "form",
+            "explode": true,
+            "value": "end",
+            "serialized": "end"
+          },
+          {
+            "name": "project",
+            "style": "form",
+            "explode": true,
+            "value": "project",
+            "serialized": "project"
+          },
+          {
+            "name": "language",
+            "style": "form",
+            "explode": true,
+            "value": "language",
+            "serialized": "language"
+          },
+          {
+            "name": "editor",
+            "style": "form",
+            "explode": true,
+            "value": "editor",
+            "serialized": "editor"
+          },
+          {
+            "name": "operating_system",
+            "style": "form",
+            "explode": true,
+            "value": "operating_system",
+            "serialized": "operating_system"
+          },
+          {
+            "name": "machine",
+            "style": "form",
+            "explode": true,
+            "value": "machine",
+            "serialized": "machine"
+          },
+          {
+            "name": "label",
+            "style": "form",
+            "explode": true,
+            "value": "label",
+            "serialized": "label"
+          }
+        ],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/compat/wakatime/v1/users/user/summaries",
+        "query": "range=today&start=start&end=end&project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "url": "https://behavior.test/compat/wakatime/v1/users/user/summaries?range=today&start=start&end=end&project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"cumulative_total\":{\"decimal\":\"decimal\",\"digital\":\"digital\",\"seconds\":1,\"text\":\"text\"},\"daily_average\":{\"days_including_holidays\":1,\"days_minus_holidays\":1,\"holidays\":1,\"seconds\":1,\"seconds_including_other_language\":30,\"text\":\"text\",\"text_including_other_language\":\"text_including_other_language\"},\"data\":[{\"branches\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"categories\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"dependencies\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"editors\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"entities\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"grand_total\":{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"text\":\"text\",\"total_seconds\":9.99},\"languages\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"machines\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"operating_systems\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"projects\":[{\"digital\":\"digital\",\"hours\":1,\"minutes\":1,\"name\":\"Example Name\",\"percent\":1,\"seconds\":1,\"text\":\"text\",\"total_seconds\":9.99}],\"range\":{\"date\":\"2024-01-01T00:00:00Z\",\"end\":\"end\",\"start\":\"start\",\"text\":\"text\",\"timezone\":\"2024-01-01T00:00:00Z\"}}],\"end\":\"end\",\"start\":\"start\"}",
+        "value": {
+          "cumulative_total": {
+            "decimal": "decimal",
+            "digital": "digital",
+            "seconds": 1,
+            "text": "text"
+          },
+          "daily_average": {
+            "days_including_holidays": 1,
+            "days_minus_holidays": 1,
+            "holidays": 1,
+            "seconds": 1,
+            "seconds_including_other_language": 30,
+            "text": "text",
+            "text_including_other_language": "text_including_other_language"
+          },
+          "data": [
+            {
+              "branches": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "categories": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "dependencies": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "editors": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "entities": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "grand_total": {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              },
+              "languages": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "machines": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "operating_systems": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "projects": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "range": {
+                "date": "2024-01-01T00:00:00Z",
+                "end": "end",
+                "start": "start",
+                "text": "text",
+                "timezone": "2024-01-01T00:00:00Z"
+              }
+            }
+          ],
+          "end": "end",
+          "start": "start"
+        }
+      }
+    },
+    {
+      "id": "behavior-10",
+      "operationId": "getHealth",
+      "kinds": ["text-response"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/health",
+        "pathParameters": {},
+        "query": [],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": []
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/health",
+        "query": "",
+        "url": "https://behavior.test/health",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "text",
+        "status": 200,
+        "mediaType": "text/plain",
+        "body": "string",
+        "value": "string"
+      }
+    },
+    {
+      "id": "behavior-11",
+      "operationId": "postHeartbeat",
+      "kinds": ["auth-application", "empty-response", "json-request"],
+      "request": {
+        "method": "POST",
+        "pathTemplate": "/heartbeat",
+        "pathParameters": {},
+        "query": [],
+        "headers": {},
+        "body": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        },
+        "bodyKind": "json",
+        "contentType": "application/json",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "POST",
+        "path": "/heartbeat",
+        "query": "",
+        "url": "https://behavior.test/heartbeat",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "bodyText": "{\"ai_input_tokens\":1,\"ai_line_changes\":1,\"ai_output_tokens\":1,\"ai_prompt_length\":1,\"ai_session\":\"ai_session\",\"branch\":\"branch\",\"category\":\"category\",\"created_at\":1,\"cursorpos\":1,\"editor\":\"editor\",\"entity\":\"entity\",\"human_line_changes\":1,\"is_write\":false,\"language\":\"language\",\"line_additions\":1,\"line_deletions\":1,\"lineno\":1,\"lines\":1,\"machine\":\"machine\",\"operating_system\":\"operating_system\",\"project\":\"project\",\"project_root_count\":1,\"time\":1,\"type\":\"type\",\"user_agent\":\"user_agent\"}",
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "empty",
+        "status": 204,
+        "mediaType": null,
+        "body": "",
+        "value": null
+      }
+    },
+    {
+      "id": "behavior-12",
+      "operationId": "postDiagnostics",
+      "kinds": ["empty-response", "json-request"],
+      "request": {
+        "method": "POST",
+        "pathTemplate": "/plugins/errors",
+        "pathParameters": {},
+        "query": [],
+        "headers": {},
+        "body": {
+          "architecture": "architecture",
+          "cli_version": "cli_version",
+          "id": 1,
+          "logs": "logs",
+          "platform": "platform",
+          "plugin": "plugin",
+          "stacktrace": "stacktrace"
+        },
+        "bodyKind": "json",
+        "contentType": "application/json",
+        "security": []
+      },
+      "expect": {
+        "method": "POST",
+        "path": "/plugins/errors",
+        "query": "",
+        "url": "https://behavior.test/plugins/errors",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "bodyText": "{\"architecture\":\"architecture\",\"cli_version\":\"cli_version\",\"id\":1,\"logs\":\"logs\",\"platform\":\"platform\",\"plugin\":\"plugin\",\"stacktrace\":\"stacktrace\"}",
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "empty",
+        "status": 204,
+        "mediaType": null,
+        "body": "",
+        "value": null
+      }
+    },
+    {
+      "id": "behavior-13",
+      "operationId": "getSummary",
+      "kinds": ["auth-application", "json-response", "query-serialization"],
+      "request": {
+        "method": "GET",
+        "pathTemplate": "/summary",
+        "pathParameters": {},
+        "query": [
+          {
+            "name": "interval",
+            "style": "form",
+            "explode": true,
+            "value": "today",
+            "serialized": "today"
+          },
+          {
+            "name": "from",
+            "style": "form",
+            "explode": true,
+            "value": "from",
+            "serialized": "from"
+          },
+          {
+            "name": "to",
+            "style": "form",
+            "explode": true,
+            "value": "to",
+            "serialized": "to"
+          },
+          {
+            "name": "recompute",
+            "style": "form",
+            "explode": true,
+            "value": false,
+            "serialized": "false"
+          },
+          {
+            "name": "project",
+            "style": "form",
+            "explode": true,
+            "value": "project",
+            "serialized": "project"
+          },
+          {
+            "name": "language",
+            "style": "form",
+            "explode": true,
+            "value": "language",
+            "serialized": "language"
+          },
+          {
+            "name": "editor",
+            "style": "form",
+            "explode": true,
+            "value": "editor",
+            "serialized": "editor"
+          },
+          {
+            "name": "operating_system",
+            "style": "form",
+            "explode": true,
+            "value": "operating_system",
+            "serialized": "operating_system"
+          },
+          {
+            "name": "machine",
+            "style": "form",
+            "explode": true,
+            "value": "machine",
+            "serialized": "machine"
+          },
+          {
+            "name": "label",
+            "style": "form",
+            "explode": true,
+            "value": "label",
+            "serialized": "label"
+          }
+        ],
+        "headers": {},
+        "bodyKind": null,
+        "contentType": null,
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      },
+      "expect": {
+        "method": "GET",
+        "path": "/summary",
+        "query": "interval=today&from=from&to=to&recompute=false&project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "url": "https://behavior.test/summary?interval=today&from=from&to=to&recompute=false&project=project&language=language&editor=editor&operating_system=operating_system&machine=machine&label=label",
+        "headers": {},
+        "bodyText": null,
+        "multipartFields": null
+      },
+      "response": {
+        "kind": "json",
+        "status": 200,
+        "mediaType": "application/json",
+        "body": "{\"branches\":[{\"key\":\"key\",\"total\":100}],\"categories\":[{\"key\":\"key\",\"total\":100}],\"editors\":[{\"key\":\"key\",\"total\":100}],\"entities\":[{\"key\":\"key\",\"total\":100}],\"from\":\"2006-01-02 15:04:05.000\",\"labels\":[{\"key\":\"key\",\"total\":100}],\"languages\":[{\"key\":\"key\",\"total\":100}],\"machines\":[{\"key\":\"key\",\"total\":100}],\"operating_systems\":[{\"key\":\"key\",\"total\":100}],\"projects\":[{\"key\":\"key\",\"total\":100}],\"to\":\"2006-01-02 15:04:05.000\",\"user_id\":\"user_-1\"}",
+        "value": {
+          "branches": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "categories": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "editors": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "entities": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "from": "2006-01-02 15:04:05.000",
+          "labels": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "languages": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "machines": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "operating_systems": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "projects": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "to": "2006-01-02 15:04:05.000",
+          "user_id": "user_-1"
+        }
+      }
+    }
+  ]
+}

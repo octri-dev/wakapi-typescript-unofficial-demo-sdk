@@ -1,0 +1,36 @@
+{
+  "name": "wakapi-unofficial-sdk",
+  "description": "REST API to interact with [Wakapi](https://wakapi.dev)\n\n## Authentication\nSet header `Authorization` to your API Key encoded as Base64 and prefixed with `Basic`\n**Example:** `Basic ODY2NDhkNzQtMTljNS00NTJiLWJhMDEtZmIzZWM3MGQ0YzJmCg==`",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "oxfmt --check src test/*.mjs",
+    "lint": "oxlint src test",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test \"test/**/*.test.mjs\"",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.0.0",
+    "typescript": "^5.4.0"
+  }
+}

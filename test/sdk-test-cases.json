@@ -1,0 +1,1264 @@
+[
+  {
+    "id": "behavior-1",
+    "operationId": "getBadge",
+    "method": "GET",
+    "path": "/compat/shields/v1/{user}/{interval}/{filter}",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[],\"streaming\":false}",
+    "kinds": ["json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "interval",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "today"
+      },
+      {
+        "name": "filter",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "filter"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "color": "color",
+        "label": "label",
+        "message": "example text",
+        "schemaVersion": 1
+      }
+    },
+    "security": [],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-2",
+    "operationId": "getWakatimeLeaders",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/leaders",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response"],
+    "parameters": [],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "current_user": {
+          "page": 30,
+          "rank": 1,
+          "user": {
+            "created_at": "2024-01-01T00:00:00Z",
+            "display_name": "Example Name",
+            "email": "user@example.com",
+            "full_name": "Example Name",
+            "id": "id-1",
+            "is_email_confirmed": false,
+            "is_email_public": false,
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "last_plugin_name": "Example Name",
+            "last_project": "last_project",
+            "modified_at": "2024-01-01T00:00:00Z",
+            "photo": "photo",
+            "timezone": "2024-01-01T00:00:00Z",
+            "username": "Example Name",
+            "website": "https://example.com"
+          }
+        },
+        "data": [
+          {
+            "rank": 1,
+            "running_total": {
+              "daily_average": 30,
+              "human_readable_daily_average": "human_readable_daily_average",
+              "human_readable_total": "human_readable_total",
+              "languages": [
+                {
+                  "name": "Example Name",
+                  "total_seconds": 9.99
+                }
+              ],
+              "total_seconds": 9.99
+            },
+            "user": {
+              "created_at": "2024-01-01T00:00:00Z",
+              "display_name": "Example Name",
+              "email": "user@example.com",
+              "full_name": "Example Name",
+              "id": "id-1",
+              "is_email_confirmed": false,
+              "is_email_public": false,
+              "last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "last_plugin_name": "Example Name",
+              "last_project": "last_project",
+              "modified_at": "2024-01-01T00:00:00Z",
+              "photo": "photo",
+              "timezone": "2024-01-01T00:00:00Z",
+              "username": "Example Name",
+              "website": "https://example.com"
+            }
+          }
+        ],
+        "language": "language",
+        "page": 30,
+        "range": {
+          "end_date": "2024-01-01T00:00:00Z",
+          "end_text": "end_text",
+          "name": "Example Name",
+          "start_date": "2024-01-01T00:00:00Z",
+          "start_text": "start_text",
+          "text": "text"
+        },
+        "total_pages": 30
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-3",
+    "operationId": "getWakatimeUser",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "data": {
+          "created_at": "2024-01-01T00:00:00Z",
+          "display_name": "Example Name",
+          "email": "user@example.com",
+          "full_name": "Example Name",
+          "id": "id-1",
+          "is_email_confirmed": false,
+          "is_email_public": false,
+          "last_heartbeat_at": "2024-01-01T00:00:00Z",
+          "last_plugin_name": "Example Name",
+          "last_project": "last_project",
+          "modified_at": "2024-01-01T00:00:00Z",
+          "photo": "photo",
+          "timezone": "2024-01-01T00:00:00Z",
+          "username": "Example Name",
+          "website": "https://example.com"
+        }
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-4",
+    "operationId": "getHeartbeats",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}/heartbeats",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "date",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "value": "2024-01-01T00:00:00Z"
+      },
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "data": [
+          {
+            "ai_input_tokens": 1,
+            "ai_line_changes": 1,
+            "ai_output_tokens": 1,
+            "ai_prompt_length": 1,
+            "ai_session": "ai_session",
+            "branch": "branch",
+            "category": "category",
+            "created_at": "2024-01-01T00:00:00Z",
+            "cursorpos": 1,
+            "entity": "entity",
+            "human_line_changes": 1,
+            "id": "id-1",
+            "is_write": false,
+            "language": "language",
+            "line_additions": 1,
+            "line_deletions": 1,
+            "lineno": 1,
+            "lines": 1,
+            "machine_name_id": "machine_name_-1",
+            "project": "project",
+            "time": 1,
+            "type": "type",
+            "user_agent_id": "user_agent_-1",
+            "user_id": "user_-1"
+          }
+        ],
+        "end": "end",
+        "start": "start",
+        "timezone": "2024-01-01T00:00:00Z"
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-5",
+    "operationId": "postHeartbeat3",
+    "method": "POST",
+    "path": "/compat/wakatime/v1/users/{user}/heartbeats",
+    "signature": "{\"errors\":[],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[\"json\"],\"response\":[\"empty\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "empty-response", "json-request", "path-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      }
+    ],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "ai_input_tokens": 1,
+        "ai_line_changes": 1,
+        "ai_output_tokens": 1,
+        "ai_prompt_length": 1,
+        "ai_session": "ai_session",
+        "branch": "branch",
+        "category": "category",
+        "created_at": 1,
+        "cursorpos": 1,
+        "editor": "editor",
+        "entity": "entity",
+        "human_line_changes": 1,
+        "is_write": false,
+        "language": "language",
+        "line_additions": 1,
+        "line_deletions": 1,
+        "lineno": 1,
+        "lines": 1,
+        "machine": "machine",
+        "operating_system": "operating_system",
+        "project": "project",
+        "project_root_count": 1,
+        "time": 1,
+        "type": "type",
+        "user_agent": "user_agent"
+      }
+    },
+    "response": {
+      "mediaType": null,
+      "kind": "empty",
+      "value": null
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-6",
+    "operationId": "getWakatimeProjects",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}/projects",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "q",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "q"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "data": [
+          {
+            "created_at": "2024-01-01T00:00:00Z",
+            "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "name": "Example Name",
+            "urlencoded_name": "https://example.com"
+          }
+        ]
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-7",
+    "operationId": "getWakatimeProject",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}/projects/{id}",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "id",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "id-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "data": {
+          "created_at": "2024-01-01T00:00:00Z",
+          "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+          "id": "id-1",
+          "last_heartbeat_at": "2024-01-01T00:00:00Z",
+          "name": "Example Name",
+          "urlencoded_name": "https://example.com"
+        }
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-8",
+    "operationId": "getWakatimesTats",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}/stats/{range}",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":false,\"style\":\"simple\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "range",
+        "location": "path",
+        "required": false,
+        "style": "simple",
+        "explode": false,
+        "value": "today"
+      },
+      {
+        "name": "project",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "project"
+      },
+      {
+        "name": "language",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "language"
+      },
+      {
+        "name": "editor",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "editor"
+      },
+      {
+        "name": "operating_system",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "operating_system"
+      },
+      {
+        "name": "machine",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "machine"
+      },
+      {
+        "name": "label",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "label"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "data": {
+          "branches": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "categories": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "daily_average": 30,
+          "days_including_holidays": 1,
+          "editors": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "end": "end",
+          "human_readable_daily_average": "human_readable_daily_average",
+          "human_readable_range": "human_readable_range",
+          "human_readable_total": "human_readable_total",
+          "is_coding_activity_visible": false,
+          "is_other_usage_visible": false,
+          "languages": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "machines": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "projects": [
+            {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "name": "Example Name",
+              "percent": 1,
+              "seconds": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            }
+          ],
+          "range": "range",
+          "start": "start",
+          "status": "active",
+          "timezone": "2024-01-01T00:00:00Z",
+          "total_seconds": 9.99,
+          "user_id": "user_-1",
+          "username": "Example Name"
+        }
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-9",
+    "operationId": "getWakatimeSummaries",
+    "method": "GET",
+    "path": "/compat/wakatime/v1/users/{user}/summaries",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "path-serialization", "query-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "range",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "today"
+      },
+      {
+        "name": "start",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "start"
+      },
+      {
+        "name": "end",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "end"
+      },
+      {
+        "name": "project",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "project"
+      },
+      {
+        "name": "language",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "language"
+      },
+      {
+        "name": "editor",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "editor"
+      },
+      {
+        "name": "operating_system",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "operating_system"
+      },
+      {
+        "name": "machine",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "machine"
+      },
+      {
+        "name": "label",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "label"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "cumulative_total": {
+          "decimal": "decimal",
+          "digital": "digital",
+          "seconds": 1,
+          "text": "text"
+        },
+        "daily_average": {
+          "days_including_holidays": 1,
+          "days_minus_holidays": 1,
+          "holidays": 1,
+          "seconds": 1,
+          "seconds_including_other_language": 30,
+          "text": "text",
+          "text_including_other_language": "text_including_other_language"
+        },
+        "data": [
+          {
+            "branches": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "categories": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "dependencies": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "editors": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "entities": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "grand_total": {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            },
+            "languages": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "machines": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "operating_systems": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "projects": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "range": {
+              "date": "2024-01-01T00:00:00Z",
+              "end": "end",
+              "start": "start",
+              "text": "text",
+              "timezone": "2024-01-01T00:00:00Z"
+            }
+          }
+        ],
+        "end": "end",
+        "start": "start"
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-10",
+    "operationId": "getHealth",
+    "method": "GET",
+    "path": "/health",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[],\"response\":[\"text\"],\"security\":[],\"streaming\":false}",
+    "kinds": ["text-response"],
+    "parameters": [],
+    "request": null,
+    "response": {
+      "mediaType": "text/plain",
+      "kind": "text",
+      "value": "string"
+    },
+    "security": [],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-11",
+    "operationId": "postHeartbeat",
+    "method": "POST",
+    "path": "/heartbeat",
+    "signature": "{\"errors\":[],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"empty\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "empty-response", "json-request"],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "ai_input_tokens": 1,
+        "ai_line_changes": 1,
+        "ai_output_tokens": 1,
+        "ai_prompt_length": 1,
+        "ai_session": "ai_session",
+        "branch": "branch",
+        "category": "category",
+        "created_at": 1,
+        "cursorpos": 1,
+        "editor": "editor",
+        "entity": "entity",
+        "human_line_changes": 1,
+        "is_write": false,
+        "language": "language",
+        "line_additions": 1,
+        "line_deletions": 1,
+        "lineno": 1,
+        "lines": 1,
+        "machine": "machine",
+        "operating_system": "operating_system",
+        "project": "project",
+        "project_root_count": 1,
+        "time": 1,
+        "type": "type",
+        "user_agent": "user_agent"
+      }
+    },
+    "response": {
+      "mediaType": null,
+      "kind": "empty",
+      "value": null
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-12",
+    "operationId": "postDiagnostics",
+    "method": "POST",
+    "path": "/plugins/errors",
+    "signature": "{\"errors\":[],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"empty\"],\"security\":[],\"streaming\":false}",
+    "kinds": ["empty-response", "json-request"],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "architecture": "architecture",
+        "cli_version": "cli_version",
+        "id": 1,
+        "logs": "logs",
+        "platform": "platform",
+        "plugin": "plugin",
+        "stacktrace": "stacktrace"
+      }
+    },
+    "response": {
+      "mediaType": null,
+      "kind": "empty",
+      "value": null
+    },
+    "security": [],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-13",
+    "operationId": "getSummary",
+    "method": "GET",
+    "path": "/summary",
+    "signature": "{\"errors\":[],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"ApiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "interval",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "today"
+      },
+      {
+        "name": "from",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "from"
+      },
+      {
+        "name": "to",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "to"
+      },
+      {
+        "name": "recompute",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": false
+      },
+      {
+        "name": "project",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "project"
+      },
+      {
+        "name": "language",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "language"
+      },
+      {
+        "name": "editor",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "editor"
+      },
+      {
+        "name": "operating_system",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "operating_system"
+      },
+      {
+        "name": "machine",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "machine"
+      },
+      {
+        "name": "label",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "value": "label"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "branches": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "categories": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "editors": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "entities": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "from": "2006-01-02 15:04:05.000",
+        "labels": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "languages": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "machines": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "operating_systems": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "projects": [
+          {
+            "key": "key",
+            "total": 100
+          }
+        ],
+        "to": "2006-01-02 15:04:05.000",
+        "user_id": "user_-1"
+      }
+    },
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "ApiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "Authorization"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  }
+]
