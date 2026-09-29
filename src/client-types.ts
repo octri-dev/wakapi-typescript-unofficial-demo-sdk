@@ -280,6 +280,14 @@ export function parameterWireValue(value: unknown, format?: "date" | "date-time"
   return format === "date" ? timestamp.slice(0, 10) : timestamp;
 }
 
+/** A `date` or `date-time` header or cookie value, or each of its items. */
+export function temporalParameter(value: unknown, format: "date" | "date-time"): unknown {
+  if (value === undefined || value === null) return undefined;
+  return Array.isArray(value)
+    ? value.map((item) => parameterWireValue(item, format))
+    : parameterWireValue(value, format);
+}
+
 /** Percent-encodes exactly one path component exactly once. */
 export function encodePathSegment(value: unknown, format?: "date" | "date-time"): string {
   return encodeURIComponent(parameterWireValue(value, format));
@@ -297,15 +305,60 @@ export function queryValue(
   return style === "form" && explode ? encoded : encoded.join(",");
 }
 
-export function serializeHeaders(values: Record<string, unknown>): Record<string, string> {
+const isParameterObject = (value: unknown): value is Record<string, unknown> =>
+  value !== null && typeof value === "object" && !(value instanceof Date);
+
+/** A `simple`-style value: array items, or object members, joined by commas. */
+function simpleValue(value: unknown, explode: boolean): string {
+  if (Array.isArray(value)) return value.map(formatQueryValue).join(",");
+  if (!isParameterObject(value)) return formatQueryValue(value);
+  return Object.entries(value)
+    .filter(([, member]) => member !== undefined && member !== null)
+    .map(([key, member]) => `${key}${explode ? "=" : ","}${formatQueryValue(member)}`)
+    .join(",");
+}
+
+export function serializeHeaders(
+  values: Record<string, unknown>,
+  exploded: readonly string[] = [],
+): Record<string, string> {
   const headers: Record<string, string> = {};
   for (const [name, value] of Object.entries(values)) {
     if (value === undefined || value === null) continue;
-    headers[name] = Array.isArray(value)
-      ? value.map(formatQueryValue).join(",")
-      : formatQueryValue(value);
+    headers[name] = simpleValue(value, exploded.includes(name));
   }
   return headers;
+}
+
+/**
+ * The `Cookie` header for `form`-style cookie parameters. An exploded array
+ * repeats its name and an exploded object sends one pair per member.
+ */
+export function serializeCookies(
+  values: Record<string, unknown>,
+  unexploded: readonly string[] = [],
+): Record<string, string> {
+  const pairs: string[] = [];
+  const add = (name: string, value: string) => pairs.push(`${name}=${encodeURIComponent(value)}`);
+  for (const [name, value] of Object.entries(values)) {
+    if (value === undefined || value === null) continue;
+    const explode = !unexploded.includes(name);
+    if (explode && Array.isArray(value)) {
+      for (const item of value) add(name, formatQueryValue(item));
+    } else if (explode && isParameterObject(value)) {
+      for (const [key, member] of Object.entries(value)) {
+        if (member !== undefined && member !== null) add(key, formatQueryValue(member));
+      }
+    } else {
+      add(name, simpleValue(value, false));
+    }
+  }
+  return pairs.length > 0 ? { Cookie: pairs.join("; ") } : {};
+}
+
+/** A parameter declared with JSON `content` is sent as its JSON text. */
+export function jsonParameter(value: unknown): string | undefined {
+  return value === undefined || value === null ? undefined : JSON.stringify(value);
 }
 
 /**

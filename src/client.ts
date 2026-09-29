@@ -651,7 +651,8 @@ export async function* sdkStream<T = unknown>(
   // parse is a hard error rather than a silent passthrough, for the same reason as
   // in the SSE flush below -- the declared item type would otherwise be a lie.
   const decodeNdjsonLine = (line: string): SdkStreamEvent<T> | null => {
-    const trimmed = line.trim();
+    // A JSON text sequence record also starts with RS.
+    const trimmed = line.replace("\x1e", "").trim();
     if (trimmed === "") return null;
     if (trimmed === STREAM_DONE_SENTINEL) return null;
     try {

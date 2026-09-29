@@ -267,6 +267,17 @@ export async function applyAuth(
 
 export function serializeBody(body: unknown, contentType: string): BodyInit | undefined {
   if (body === undefined) return undefined;
+  // One JSON record per line; a JSON text sequence also starts each with RS.
+  if (
+    /^application\/(?:x-ndjson|ndjson|jsonl|json-lines|x-jsonlines|json-seq)(?:\s*;|$)/i.test(
+      contentType,
+    )
+  ) {
+    const separator = /^application\/json-seq/i.test(contentType) ? "\x1e" : "";
+    return (Array.isArray(body) ? body : [body])
+      .map((record) => `${separator}${JSON.stringify(record)}\n`)
+      .join("");
+  }
   if (contentType.includes("json")) return JSON.stringify(body);
   // application/x-www-form-urlencoded: encode the field map here rather than
   // leaving it to the transport. Only an already-encoded string is equivalent

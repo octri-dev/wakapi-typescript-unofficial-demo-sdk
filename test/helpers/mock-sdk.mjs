@@ -88,7 +88,7 @@ export const argumentsFor = (route, mediaType = null) => {
   for (const parameter of route.queryParameters ?? []) {
     if (parameter.example !== undefined) values[parameter.wireName] = parameter.example;
   }
-  for (const parameter of route.headerParameters ?? []) {
+  for (const parameter of [...(route.headerParameters ?? []), ...(route.cookieParameters ?? [])]) {
     if (parameter.example !== undefined) values[parameter.wireName] = parameter.example;
   }
   const modes = (route.requestModes ?? []).filter((mode) => mode.example !== undefined);

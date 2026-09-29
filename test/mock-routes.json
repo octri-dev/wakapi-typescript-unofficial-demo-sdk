@@ -14,6 +14,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -21,6 +24,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -75,6 +79,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -82,6 +89,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -161,6 +169,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -168,6 +179,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -224,6 +236,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -236,11 +251,15 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "2024-01-01T00:00:00Z"
       }
     ],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -327,6 +346,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -334,6 +356,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -562,6 +585,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -574,6 +600,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "today"
       },
       {
@@ -583,6 +612,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "start"
       },
       {
@@ -592,6 +624,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "end"
       },
       {
@@ -601,6 +636,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "project"
       },
       {
@@ -610,6 +648,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "language"
       },
       {
@@ -619,6 +660,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "editor"
       },
       {
@@ -628,6 +672,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "operating_system"
       },
       {
@@ -637,6 +684,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "machine"
       },
       {
@@ -646,11 +696,15 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "label"
       }
     ],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -836,6 +890,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -848,11 +905,15 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "q"
       }
     ],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 1,
@@ -905,6 +966,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       },
@@ -915,6 +979,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "id-1",
         "routeRepresentative": "sdk-route-2"
       }
@@ -922,6 +989,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 2,
@@ -972,6 +1040,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       },
@@ -982,6 +1053,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "today",
         "routeRepresentative": "today"
       }
@@ -994,6 +1068,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "project"
       },
       {
@@ -1003,6 +1080,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "language"
       },
       {
@@ -1012,6 +1092,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "editor"
       },
       {
@@ -1021,6 +1104,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "operating_system"
       },
       {
@@ -1030,6 +1116,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "machine"
       },
       {
@@ -1039,11 +1128,15 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "label"
       }
     ],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 5,
       "parameterSegments": 2,
@@ -1183,6 +1276,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 4,
       "parameterSegments": 0,
@@ -1291,6 +1385,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -1298,6 +1395,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 4,
       "parameterSegments": 1,
@@ -1357,6 +1455,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -1364,6 +1465,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 3,
       "parameterSegments": 1,
@@ -1443,6 +1545,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -1450,6 +1555,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 3,
       "parameterSegments": 1,
@@ -1617,6 +1723,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -1624,6 +1733,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 3,
       "parameterSegments": 1,
@@ -1852,6 +1962,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       },
@@ -1862,6 +1975,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "today",
         "routeRepresentative": "today"
       },
@@ -1872,6 +1988,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "filter",
         "routeRepresentative": "sdk-route-3"
       }
@@ -1879,6 +1998,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 3,
       "parameterSegments": 3,
@@ -1921,6 +2041,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 2,
       "parameterSegments": 0,
@@ -2023,6 +2144,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -2030,6 +2154,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 2,
       "parameterSegments": 1,
@@ -2109,6 +2234,9 @@
         "explode": false,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "user",
         "routeRepresentative": "sdk-route-1"
       }
@@ -2116,6 +2244,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 2,
       "parameterSegments": 1,
@@ -2340,6 +2469,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 1,
       "parameterSegments": 0,
@@ -2415,6 +2545,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 1,
       "parameterSegments": 0,
@@ -2644,6 +2775,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "today"
       },
       {
@@ -2653,6 +2787,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "from"
       },
       {
@@ -2662,6 +2799,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "to"
       },
       {
@@ -2671,6 +2811,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": false
       },
       {
@@ -2680,6 +2823,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "project"
       },
       {
@@ -2689,6 +2835,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "language"
       },
       {
@@ -2698,6 +2847,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "editor"
       },
       {
@@ -2707,6 +2859,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "operating_system"
       },
       {
@@ -2716,6 +2871,9 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "machine"
       },
       {
@@ -2725,11 +2883,15 @@
         "explode": true,
         "allowReserved": false,
         "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
         "example": "label"
       }
     ],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 1,
       "parameterSegments": 0,
@@ -2825,6 +2987,7 @@
     "queryParameters": [],
     "literalQuery": [],
     "headerParameters": [],
+    "cookieParameters": [],
     "specificity": {
       "staticSegments": 1,
       "parameterSegments": 0,

@@ -116,7 +116,7 @@ const CALL = {
   postHeartbeat5: {
     route: "postHeartbeat5",
     mediaType: "application/json",
-    invoke: (bag) => postHeartbeat5(config, { body: bag.__body }),
+    invoke: (bag) => postHeartbeat5(config, bag.__body),
   },
   postHeartbeat4: {
     route: "postHeartbeat4",

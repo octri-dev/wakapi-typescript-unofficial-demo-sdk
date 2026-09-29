@@ -13,6 +13,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       },
       {
@@ -21,6 +22,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "today"
       },
       {
@@ -29,6 +31,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "filter"
       }
     ],
@@ -172,6 +175,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       }
     ],
@@ -238,6 +242,7 @@
         "required": true,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "2024-01-01T00:00:00Z"
       },
       {
@@ -246,6 +251,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       }
     ],
@@ -320,6 +326,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       }
     ],
@@ -392,6 +399,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       },
       {
@@ -400,6 +408,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "q"
       }
     ],
@@ -453,6 +462,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       },
       {
@@ -461,6 +471,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "id-1"
       }
     ],
@@ -512,6 +523,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       },
       {
@@ -520,6 +532,7 @@
         "required": false,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "today"
       },
       {
@@ -528,6 +541,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "project"
       },
       {
@@ -536,6 +550,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "language"
       },
       {
@@ -544,6 +559,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "editor"
       },
       {
@@ -552,6 +568,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "operating_system"
       },
       {
@@ -560,6 +577,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "machine"
       },
       {
@@ -568,6 +586,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "label"
       }
     ],
@@ -712,6 +731,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "user"
       },
       {
@@ -720,6 +740,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "today"
       },
       {
@@ -728,6 +749,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "start"
       },
       {
@@ -736,6 +758,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "end"
       },
       {
@@ -744,6 +767,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "project"
       },
       {
@@ -752,6 +776,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "language"
       },
       {
@@ -760,6 +785,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "editor"
       },
       {
@@ -768,6 +794,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "operating_system"
       },
       {
@@ -776,6 +803,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "machine"
       },
       {
@@ -784,6 +812,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "label"
       }
     ],
@@ -1103,6 +1132,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "today"
       },
       {
@@ -1111,6 +1141,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "from"
       },
       {
@@ -1119,6 +1150,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "to"
       },
       {
@@ -1127,6 +1159,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": false
       },
       {
@@ -1135,6 +1168,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "project"
       },
       {
@@ -1143,6 +1177,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "language"
       },
       {
@@ -1151,6 +1186,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "editor"
       },
       {
@@ -1159,6 +1195,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "operating_system"
       },
       {
@@ -1167,6 +1204,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "machine"
       },
       {
@@ -1175,6 +1213,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "label"
       }
     ],
