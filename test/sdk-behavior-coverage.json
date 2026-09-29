@@ -1,0 +1,13 @@
+{
+  "renderedCases": 13,
+  "kinds": [
+    "auth-application",
+    "empty-response",
+    "error-response",
+    "json-request",
+    "json-response",
+    "path-serialization",
+    "query-serialization",
+    "text-response"
+  ]
+}

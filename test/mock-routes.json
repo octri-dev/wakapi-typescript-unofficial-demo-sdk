@@ -1,0 +1,2854 @@
+[
+  {
+    "operationId": "getAllTime",
+    "summary": "Retrieves a user's coding-time summary for all time since today. Set `user` to a user ID or `current` to select the user whose summary you want.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/all_time_since_today",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/all_time_since_today$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 41,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 3,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": {
+            "is_up_to_date": false,
+            "range": {
+              "end": "end",
+              "end_date": "2024-01-01T00:00:00Z",
+              "start": "start",
+              "start_date": "2024-01-01T00:00:00Z",
+              "timezone": "2024-01-01T00:00:00Z"
+            },
+            "text": "text",
+            "total_seconds": 9.99
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat7",
+    "summary": "Creates multiple heartbeats for a user from a WakaTime-compatible request. Send a JSON array of heartbeat objects; each object can include fields such as `entity`, `language`, and `created_at`.",
+    "method": "POST",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/heartbeats.bulk",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/heartbeats\\.bulk$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 36,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 6,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "whole",
+        "requiredFields": [],
+        "fields": [],
+        "example": [
+          {
+            "ai_input_tokens": 1,
+            "ai_line_changes": 1,
+            "ai_output_tokens": 1,
+            "ai_prompt_length": 1,
+            "ai_session": "ai_session",
+            "branch": "branch",
+            "category": "category",
+            "created_at": 1,
+            "cursorpos": 1,
+            "editor": "editor",
+            "entity": "entity",
+            "human_line_changes": 1,
+            "is_write": false,
+            "language": "language",
+            "line_additions": 1,
+            "line_deletions": 1,
+            "lineno": 1,
+            "lines": 1,
+            "machine": "machine",
+            "operating_system": "operating_system",
+            "project": "project",
+            "project_root_count": 1,
+            "time": 1,
+            "type": "type",
+            "user_agent": "user_agent"
+          }
+        ]
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeUseragents",
+    "summary": "Lists the unique user agents recorded for a specified user. Use the `user` path parameter to select the user whose agent history you want to inspect.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/user_agents",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/user_agents$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 32,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 11,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": [
+            {
+              "editor": "editor",
+              "first_seen": "first_seen",
+              "id": "id-1",
+              "is_browser_extension": false,
+              "is_desktop_app": false,
+              "last_seen": "last_seen",
+              "os": "os",
+              "value": "value",
+              "version": "version"
+            }
+          ],
+          "total_pages": 30
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getHeartbeats",
+    "summary": "Lists a user's heartbeats for a specified date. Provide `date` to select the day and `user` to identify whose activity to retrieve.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/heartbeats",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/heartbeats$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "date",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "2024-01-01T00:00:00Z"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 31,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 4,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": [
+            {
+              "ai_input_tokens": 1,
+              "ai_line_changes": 1,
+              "ai_output_tokens": 1,
+              "ai_prompt_length": 1,
+              "ai_session": "ai_session",
+              "branch": "branch",
+              "category": "category",
+              "created_at": "2024-01-01T00:00:00Z",
+              "cursorpos": 1,
+              "entity": "entity",
+              "human_line_changes": 1,
+              "id": "id-1",
+              "is_write": false,
+              "language": "language",
+              "line_additions": 1,
+              "line_deletions": 1,
+              "lineno": 1,
+              "lines": 1,
+              "machine_name_id": "machine_name_-1",
+              "project": "project",
+              "time": 1,
+              "type": "type",
+              "user_agent_id": "user_agent_-1",
+              "user_id": "user_-1"
+            }
+          ],
+          "end": "end",
+          "start": "start",
+          "timezone": "2024-01-01T00:00:00Z"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": "string",
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "postHeartbeat3",
+    "summary": "Creates a single heartbeat for a user from a WakaTime-compatible request. Send the heartbeat as a JSON object; `created_at` is numeric, and the `editor` field is ignored.",
+    "method": "POST",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/heartbeats",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/heartbeats$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 31,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 5,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "ai_input_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_output_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_prompt_length",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_session",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "branch",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "category",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "created_at",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "cursorpos",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "editor",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "entity",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "human_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "is_write",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "language",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_additions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_deletions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lineno",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lines",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "machine",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "operating_system",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project_root_count",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "time",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "type",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user_agent",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeSummaries",
+    "summary": "Retrieves WakaTime-compatible summaries for a specified user. Use `range` or the `start` and `end` dates to select a period, and apply project, language, editor, operating system, machine, or label filters to narrow the results.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/summaries",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/summaries$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "range",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "today"
+      },
+      {
+        "wireName": "start",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "start"
+      },
+      {
+        "wireName": "end",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "end"
+      },
+      {
+        "wireName": "project",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "project"
+      },
+      {
+        "wireName": "language",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "language"
+      },
+      {
+        "wireName": "editor",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "editor"
+      },
+      {
+        "wireName": "operating_system",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "operating_system"
+      },
+      {
+        "wireName": "machine",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "machine"
+      },
+      {
+        "wireName": "label",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "label"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 30,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 10,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "cumulative_total": {
+            "decimal": "decimal",
+            "digital": "digital",
+            "seconds": 1,
+            "text": "text"
+          },
+          "daily_average": {
+            "days_including_holidays": 1,
+            "days_minus_holidays": 1,
+            "holidays": 1,
+            "seconds": 1,
+            "seconds_including_other_language": 30,
+            "text": "text",
+            "text_including_other_language": "text_including_other_language"
+          },
+          "data": [
+            {
+              "branches": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "categories": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "dependencies": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "editors": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "entities": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "grand_total": {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              },
+              "languages": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "machines": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "operating_systems": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "projects": [
+                {
+                  "digital": "digital",
+                  "hours": 1,
+                  "minutes": 1,
+                  "name": "Example Name",
+                  "percent": 1,
+                  "seconds": 1,
+                  "text": "text",
+                  "total_seconds": 9.99
+                }
+              ],
+              "range": {
+                "date": "2024-01-01T00:00:00Z",
+                "end": "end",
+                "start": "start",
+                "text": "text",
+                "timezone": "2024-01-01T00:00:00Z"
+              }
+            }
+          ],
+          "end": "end",
+          "start": "start"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeProjects",
+    "summary": "Lists a user's projects. Set `user` to a user ID or `current`, and optionally use `q` to filter the projects.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/projects",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/projects$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "q",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "q"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 1,
+      "totalSegments": 6,
+      "staticCharacterCount": 29,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 7,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": [
+            {
+              "created_at": "2024-01-01T00:00:00Z",
+              "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "name": "Example Name",
+              "urlencoded_name": "https://example.com"
+            }
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeProject",
+    "summary": "Retrieves a single project for a specified user. Provide `user` to select the user and `id` to identify the project.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/projects/{id}",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/projects/(?<sdkPath1>[^/]+)$",
+    "pathParams": ["user", "id"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      },
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "id-1",
+        "routeRepresentative": "sdk-route-2"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 2,
+      "totalSegments": 7,
+      "staticCharacterCount": 29,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 8,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": {
+            "created_at": "2024-01-01T00:00:00Z",
+            "human_readable_last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "name": "Example Name",
+            "urlencoded_name": "https://example.com"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimesTats",
+    "summary": "Retrieves coding-activity statistics for a user over a selected interval. Use the optional query parameters to filter the statistics by project, language, editor, operating system, machine, or project label.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}/stats/{range}",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)/stats/(?<sdkPath1>(?:(?:today|yesterday|week|month|year|7_days|last_7_days|30_days|last_30_days|6_months|last_6_months|12_months|last_12_months|last_year|any|all_time)))$",
+    "pathParams": ["user", "range"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      },
+      {
+        "wireName": "range",
+        "required": false,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "today",
+        "routeRepresentative": "today"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "project",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "project"
+      },
+      {
+        "wireName": "language",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "language"
+      },
+      {
+        "wireName": "editor",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "editor"
+      },
+      {
+        "wireName": "operating_system",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "operating_system"
+      },
+      {
+        "wireName": "machine",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "machine"
+      },
+      {
+        "wireName": "label",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "label"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 5,
+      "parameterSegments": 2,
+      "totalSegments": 7,
+      "staticCharacterCount": 26,
+      "constrainedParameters": 1,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 9,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": {
+            "branches": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "categories": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "daily_average": 30,
+            "days_including_holidays": 1,
+            "editors": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "end": "end",
+            "human_readable_daily_average": "human_readable_daily_average",
+            "human_readable_range": "human_readable_range",
+            "human_readable_total": "human_readable_total",
+            "is_coding_activity_visible": false,
+            "is_other_usage_visible": false,
+            "languages": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "machines": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "operating_systems": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "projects": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "range": "range",
+            "start": "start",
+            "status": "active",
+            "timezone": "2024-01-01T00:00:00Z",
+            "total_seconds": 9.99,
+            "user_id": "user_-1",
+            "username": "Example Name"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeLeaders",
+    "summary": "Lists users ranked by coding activity in descending order. Use this endpoint to retrieve the leaderboard, including its ranking data, current-user information, and range metadata.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/leaders",
+    "regexSource": "^/compat/wakatime/v1/leaders$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 23,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 1,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "current_user": {
+            "page": 30,
+            "rank": 1,
+            "user": {
+              "created_at": "2024-01-01T00:00:00Z",
+              "display_name": "Example Name",
+              "email": "user@example.com",
+              "full_name": "Example Name",
+              "id": "id-1",
+              "is_email_confirmed": false,
+              "is_email_public": false,
+              "last_heartbeat_at": "2024-01-01T00:00:00Z",
+              "last_plugin_name": "Example Name",
+              "last_project": "last_project",
+              "modified_at": "2024-01-01T00:00:00Z",
+              "photo": "photo",
+              "timezone": "2024-01-01T00:00:00Z",
+              "username": "Example Name",
+              "website": "https://example.com"
+            }
+          },
+          "data": [
+            {
+              "rank": 1,
+              "running_total": {
+                "daily_average": 30,
+                "human_readable_daily_average": "human_readable_daily_average",
+                "human_readable_total": "human_readable_total",
+                "languages": [
+                  {
+                    "name": "Example Name",
+                    "total_seconds": 9.99
+                  }
+                ],
+                "total_seconds": 9.99
+              },
+              "user": {
+                "created_at": "2024-01-01T00:00:00Z",
+                "display_name": "Example Name",
+                "email": "user@example.com",
+                "full_name": "Example Name",
+                "id": "id-1",
+                "is_email_confirmed": false,
+                "is_email_public": false,
+                "last_heartbeat_at": "2024-01-01T00:00:00Z",
+                "last_plugin_name": "Example Name",
+                "last_project": "last_project",
+                "modified_at": "2024-01-01T00:00:00Z",
+                "photo": "photo",
+                "timezone": "2024-01-01T00:00:00Z",
+                "username": "Example Name",
+                "website": "https://example.com"
+              }
+            }
+          ],
+          "language": "language",
+          "page": 30,
+          "range": {
+            "end_date": "2024-01-01T00:00:00Z",
+            "end_text": "end_text",
+            "name": "Example Name",
+            "start_date": "2024-01-01T00:00:00Z",
+            "start_text": "start_text",
+            "text": "text"
+          },
+          "total_pages": 30
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getWakatimeUser",
+    "summary": "Retrieves a user's profile information. Set `user` to a user ID or `current` to retrieve the profile associated with the authenticated user.",
+    "method": "GET",
+    "pathTemplate": "/compat/wakatime/v1/users/{user}",
+    "regexSource": "^/compat/wakatime/v1/users/(?<sdkPath0>[^/]+)$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 1,
+      "totalSegments": 5,
+      "staticCharacterCount": 21,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 2,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "data": {
+            "created_at": "2024-01-01T00:00:00Z",
+            "display_name": "Example Name",
+            "email": "user@example.com",
+            "full_name": "Example Name",
+            "id": "id-1",
+            "is_email_confirmed": false,
+            "is_email_public": false,
+            "last_heartbeat_at": "2024-01-01T00:00:00Z",
+            "last_plugin_name": "Example Name",
+            "last_project": "last_project",
+            "modified_at": "2024-01-01T00:00:00Z",
+            "photo": "photo",
+            "timezone": "2024-01-01T00:00:00Z",
+            "username": "Example Name",
+            "website": "https://example.com"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat6",
+    "summary": "Creates multiple heartbeats for the specified user. Submit a JSON array of heartbeat objects containing the activity data you want to record. The schema does not mark any fields within the heartbeat objects as required.",
+    "method": "POST",
+    "pathTemplate": "/v1/users/{user}/heartbeats.bulk",
+    "regexSource": "^/v1/users/(?<sdkPath0>[^/]+)/heartbeats\\.bulk$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 22,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 21,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "whole",
+        "requiredFields": [],
+        "fields": [],
+        "example": [
+          {
+            "ai_input_tokens": 1,
+            "ai_line_changes": 1,
+            "ai_output_tokens": 1,
+            "ai_prompt_length": 1,
+            "ai_session": "ai_session",
+            "branch": "branch",
+            "category": "category",
+            "created_at": 1,
+            "cursorpos": 1,
+            "editor": "editor",
+            "entity": "entity",
+            "human_line_changes": 1,
+            "is_write": false,
+            "language": "language",
+            "line_additions": 1,
+            "line_deletions": 1,
+            "lineno": 1,
+            "lines": 1,
+            "machine": "machine",
+            "operating_system": "operating_system",
+            "project": "project",
+            "project_root_count": 1,
+            "time": 1,
+            "type": "type",
+            "user_agent": "user_agent"
+          }
+        ]
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "statusbar",
+    "summary": "Retrieves today's activity summary for a specified user in a status-bar-compatible format. Use the `user` path parameter to select the user whose current-day activity you want to view.",
+    "method": "GET",
+    "pathTemplate": "/users/{user}/statusbar/today",
+    "regexSource": "^/users/(?<sdkPath0>[^/]+)/statusbar/today$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 19,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 19,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "cached_at": "2024-01-01T00:00:00Z",
+          "data": {
+            "branches": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "categories": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "dependencies": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "editors": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "entities": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "grand_total": {
+              "digital": "digital",
+              "hours": 1,
+              "minutes": 1,
+              "text": "text",
+              "total_seconds": 9.99
+            },
+            "languages": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "machines": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "operating_systems": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "projects": [
+              {
+                "digital": "digital",
+                "hours": 1,
+                "minutes": 1,
+                "name": "Example Name",
+                "percent": 1,
+                "seconds": 1,
+                "text": "text",
+                "total_seconds": 9.99
+              }
+            ],
+            "range": {
+              "date": "2024-01-01T00:00:00Z",
+              "end": "end",
+              "start": "start",
+              "text": "text",
+              "timezone": "2024-01-01T00:00:00Z"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat2",
+    "summary": "Creates a heartbeat for the specified user. Submit a JSON object with the activity data you want to record, such as `entity`, `language`, `category`, and line-change values. The schema does not mark any heartbeat fields as required.",
+    "method": "POST",
+    "pathTemplate": "/v1/users/{user}/heartbeats",
+    "regexSource": "^/v1/users/(?<sdkPath0>[^/]+)/heartbeats$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 20,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "ai_input_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_output_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_prompt_length",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_session",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "branch",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "category",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "created_at",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "cursorpos",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "editor",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "entity",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "human_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "is_write",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "language",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_additions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_deletions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lineno",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lines",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "machine",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "operating_system",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project_root_count",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "time",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "type",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user_agent",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getBadge",
+    "summary": "Retrieves badge data for a user, interval, and filter in a format compatible with Shields.io. Use `interval` to choose the aggregation period and `filter` to select an entity such as a project or language; public data access must be enabled for the user.",
+    "method": "GET",
+    "pathTemplate": "/compat/shields/v1/{user}/{interval}/{filter}",
+    "regexSource": "^/compat/shields/v1/(?<sdkPath0>[^/]+)/(?<sdkPath1>(?:(?:today|yesterday|week|month|year|7_days|last_7_days|30_days|last_30_days|6_months|last_6_months|12_months|last_12_months|last_year|any|all_time)))/(?<sdkPath2>[^/]+)$",
+    "pathParams": ["user", "interval", "filter"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      },
+      {
+        "wireName": "interval",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "today",
+        "routeRepresentative": "today"
+      },
+      {
+        "wireName": "filter",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "filter",
+        "routeRepresentative": "sdk-route-3"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 3,
+      "totalSegments": 6,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 1,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 0,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "color": "color",
+          "label": "label",
+          "message": "example text",
+          "schemaVersion": 1
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postDiagnostics",
+    "summary": "Submits a diagnostics object sent by the WakaTime CLI. Include diagnostic details such as the CLI version, platform, logs, or stack trace to provide context for the reported issue.",
+    "method": "POST",
+    "pathTemplate": "/plugins/errors",
+    "regexSource": "^/plugins/errors$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 13,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 15,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "architecture",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "cli_version",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "id",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "logs",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "platform",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "plugin",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "stacktrace",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "architecture": "architecture",
+          "cli_version": "cli_version",
+          "id": 1,
+          "logs": "logs",
+          "platform": "platform",
+          "plugin": "plugin",
+          "stacktrace": "stacktrace"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat8",
+    "summary": "Submits multiple heartbeats for a specified user in one request. Send a JSON array of heartbeat objects to record activity in bulk.",
+    "method": "POST",
+    "pathTemplate": "/users/{user}/heartbeats.bulk",
+    "regexSource": "^/users/(?<sdkPath0>[^/]+)/heartbeats\\.bulk$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 1,
+      "totalSegments": 3,
+      "staticCharacterCount": 20,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 18,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "whole",
+        "requiredFields": [],
+        "fields": [],
+        "example": [
+          {
+            "ai_input_tokens": 1,
+            "ai_line_changes": 1,
+            "ai_output_tokens": 1,
+            "ai_prompt_length": 1,
+            "ai_session": "ai_session",
+            "branch": "branch",
+            "category": "category",
+            "created_at": 1,
+            "cursorpos": 1,
+            "editor": "editor",
+            "entity": "entity",
+            "human_line_changes": 1,
+            "is_write": false,
+            "language": "language",
+            "line_additions": 1,
+            "line_deletions": 1,
+            "lineno": 1,
+            "lines": 1,
+            "machine": "machine",
+            "operating_system": "operating_system",
+            "project": "project",
+            "project_root_count": 1,
+            "time": 1,
+            "type": "type",
+            "user_agent": "user_agent"
+          }
+        ]
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat4",
+    "summary": "Submits a single heartbeat for a specified user. Send the heartbeat as a JSON object containing activity data such as `entity`, `category`, and `language`.",
+    "method": "POST",
+    "pathTemplate": "/users/{user}/heartbeats",
+    "regexSource": "^/users/(?<sdkPath0>[^/]+)/heartbeats$",
+    "pathParams": ["user"],
+    "pathParameters": [
+      {
+        "wireName": "user",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 1,
+      "totalSegments": 3,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 17,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "ai_input_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_output_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_prompt_length",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_session",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "branch",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "category",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "created_at",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "cursorpos",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "editor",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "entity",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "human_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "is_write",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "language",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_additions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_deletions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lineno",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lines",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "machine",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "operating_system",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project_root_count",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "time",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "type",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user_agent",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat5",
+    "summary": "Submits multiple heartbeats in one request. Send a JSON array of heartbeat objects to record activity in bulk.",
+    "method": "POST",
+    "pathTemplate": "/heartbeats",
+    "regexSource": "^/heartbeats$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 10,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 14,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "whole",
+        "requiredFields": [],
+        "fields": [],
+        "example": [
+          {
+            "ai_input_tokens": 1,
+            "ai_line_changes": 1,
+            "ai_output_tokens": 1,
+            "ai_prompt_length": 1,
+            "ai_session": "ai_session",
+            "branch": "branch",
+            "category": "category",
+            "created_at": 1,
+            "cursorpos": 1,
+            "editor": "editor",
+            "entity": "entity",
+            "human_line_changes": 1,
+            "is_write": false,
+            "language": "language",
+            "line_additions": 1,
+            "line_deletions": 1,
+            "lineno": 1,
+            "lines": 1,
+            "machine": "machine",
+            "operating_system": "operating_system",
+            "project": "project",
+            "project_root_count": 1,
+            "time": 1,
+            "type": "type",
+            "user_agent": "user_agent"
+          }
+        ]
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "postHeartbeat",
+    "summary": "Submits a single heartbeat containing activity data. Send the heartbeat as a JSON object, using fields such as `entity`, `category`, and `language` to describe the recorded activity.",
+    "method": "POST",
+    "pathTemplate": "/heartbeat",
+    "regexSource": "^/heartbeat$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 13,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "ai_input_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_output_tokens",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_prompt_length",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ai_session",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "branch",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "category",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "created_at",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "cursorpos",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "editor",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "entity",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "human_line_changes",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "is_write",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "language",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_additions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "line_deletions",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lineno",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lines",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "machine",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "operating_system",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "project_root_count",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "time",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "type",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user_agent",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "ai_input_tokens": 1,
+          "ai_line_changes": 1,
+          "ai_output_tokens": 1,
+          "ai_prompt_length": 1,
+          "ai_session": "ai_session",
+          "branch": "branch",
+          "category": "category",
+          "created_at": 1,
+          "cursorpos": 1,
+          "editor": "editor",
+          "entity": "entity",
+          "human_line_changes": 1,
+          "is_write": false,
+          "language": "language",
+          "line_additions": 1,
+          "line_deletions": 1,
+          "lineno": 1,
+          "lines": 1,
+          "machine": "machine",
+          "operating_system": "operating_system",
+          "project": "project",
+          "project_root_count": 1,
+          "time": 1,
+          "type": "type",
+          "user_agent": "user_agent"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "201",
+        "mediaType": null,
+        "decoderKind": "empty",
+        "example": null,
+        "bodyBase64": null,
+        "exampleSource": "none",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getSummary",
+    "summary": "Retrieves a summary of activity for the requested interval or date range. Use `from` and `to` to define the period, and apply project, language, editor, operating system, machine, or label filters to narrow the summary.",
+    "method": "GET",
+    "pathTemplate": "/summary",
+    "regexSource": "^/summary$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "interval",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "today"
+      },
+      {
+        "wireName": "from",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "from"
+      },
+      {
+        "wireName": "to",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "to"
+      },
+      {
+        "wireName": "recompute",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": false
+      },
+      {
+        "wireName": "project",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "project"
+      },
+      {
+        "wireName": "language",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "language"
+      },
+      {
+        "wireName": "editor",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "editor"
+      },
+      {
+        "wireName": "operating_system",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "operating_system"
+      },
+      {
+        "wireName": "machine",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "machine"
+      },
+      {
+        "wireName": "label",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "label"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 7,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 16,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "branches": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "categories": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "editors": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "entities": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "from": "2006-01-02 15:04:05.000",
+          "labels": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "languages": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "machines": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "operating_systems": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "projects": [
+            {
+              "key": "key",
+              "total": 100
+            }
+          ],
+          "to": "2006-01-02 15:04:05.000",
+          "user_id": "user_-1"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  },
+  {
+    "operationId": "getHealth",
+    "summary": "Retrieves the application's health status. Use this endpoint to check the service's current health without supplying request parameters or a body.",
+    "method": "GET",
+    "pathTemplate": "/health",
+    "regexSource": "^/health$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 6,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 12,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "text/plain",
+        "decoderKind": "text",
+        "example": "string",
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {}
+  }
+]
